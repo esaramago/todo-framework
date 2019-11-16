@@ -1,0 +1,166 @@
+:root {
+    --inner-gap-sm: 1rem;
+    --inner-gap: 2rem;
+    --outer-gap: 4rem;
+    --form-height: 5rem;
+    --color-main: 65, 105, 225;
+    --color-grey-500: 170, 170, 170;
+    --color-grey-200: 238, 238, 238;
+    --font-size: 1.6rem;
+}
+
+
+/* Reset ============================================= */
+
+ul,
+form,
+body,
+button,
+input {
+    margin: 0;
+}
+button,
+ul {
+    padding: 0;
+}
+button {
+    width: auto;
+    background: none;
+    border: none;
+}
+ul {
+    list-style: none;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: Roboto, sans-serif;
+    line-height: 1;
+}
+input {
+    font-size: var(--font-size);
+}
+
+
+/* Grid ============================================= */
+.o-grid {
+    display: flex;
+    align-items: center;
+    padding: 0 calc(var(--inner-gap) / 2);
+    margin-right: calc(var(--inner-gap) * -1);
+    margin-left: calc(var(--inner-gap) * -1);
+}
+.o-grid > * {
+    padding: 0 calc(var(--inner-gap) / 2);
+}
+.o-grid__full {
+    flex-grow: 1;
+}
+
+
+/* Header ============================================= */
+.c-header {
+    display: flex;
+    align-items: flex-end;
+    padding: var(--inner-gap);
+    background-color: royalblue;
+    box-shadow: 0 .1rem .2rem rgba(var(--color-main), .6);
+    color: #FFF;
+}
+
+/* Heading ============================================= */
+.c-heading {
+    margin: 0 0 0 var(--inner-gap);
+    font-size: 2.8rem;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.c-heading__strong {
+    font-weight: 600;
+}
+
+
+/* Main ============================================= */
+.c-main {
+    display: grid;
+    grid-gap: var(--outer-gap);
+    padding: var(--outer-gap);
+    box-sizing: border-box;
+    max-width: 50rem;
+    width: 100%;
+    margin: auto;
+    font-size: var(--font-size);
+}
+
+
+
+/* Icon ============================================= */
+.c-icon {
+    --size: 2.8rem;
+    width: var(--size);
+    height: var(--size);
+}
+.c-icon.--lg {
+    --size: 3.5rem;
+    width: var(--size);
+    height: var(--size);
+}
+
+
+
+
+/* List Item ============================================= */
+/* .c-list {
+    border-bottom: 1px solid #AAA;
+} */
+.c-list-item {
+    padding: var(--inner-gap-sm) var(--inner-gap);
+    background-color: rgb(var(--color-grey-200));
+    /* border: 1px solid rgb(var(--color-grey-500));
+    border-bottom: 0; */
+    margin-bottom: .2rem;
+}
+.c-list-item.--done {
+    /*  opacity: .6;*/
+    text-decoration: line-through;
+    background-color: rgba(var(--color-grey-200), .4);
+    /* border-color: rgba(var(--color-grey-500), .4); */
+}
+
+
+/* Button ============================================= */
+.c-button {
+    vertical-align: middle;
+    height: var(--form-height);
+    background-color: rgba(var(--color-main));
+    padding: 0 1.7rem;
+}
+
+/* Input ============================================= */
+.c-input {
+    width: 100%;
+    height: var(--form-height);
+    padding: 0 var(--inner-gap);
+    vertical-align: middle;
+}
+
+/* Checkbox ============================================= */
+.c-checkbox {
+    --size: 3rem;
+    width: var(--size);
+    height: var(--size);
+}
+
+
+/* Utilities ============================================= */
+.is-visually-hidden {
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
+}
+
