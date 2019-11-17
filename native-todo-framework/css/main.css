@@ -1,12 +1,20 @@
 :root {
+
+    /* sizes */
     --inner-gap-sm: 1rem;
     --inner-gap: 2rem;
     --outer-gap: 4rem;
     --form-height: 5rem;
+    --font-size: 1.6rem;
+    --heading-font-size: 2.8rem;
+    --icon-size: 2.8rem;
+    --icon-size-lg: 3.5rem;
+    --button-padding: 1.7rem;
+    
+    /* colors */
     --color-main: 65, 105, 225;
     --color-grey-500: 170, 170, 170;
     --color-grey-200: 238, 238, 238;
-    --font-size: 1.6rem;
 }
 
 @media (max-width: 400px) {
@@ -14,6 +22,12 @@
         --inner-gap-sm: .5rem;
         --inner-gap: 1em;
         --outer-gap: 2rem;
+        --form-height: 4rem;
+        --font-size: 1.4rem;
+        --heading-font-size: 2.3rem;
+        --icon-size: 2rem;
+        --icon-size-lg: 2.8rem;
+        --button-padding: 1.2rem;
     }
 }
 
@@ -45,7 +59,7 @@ html {
 body {
     font-family: Roboto, sans-serif;
     line-height: 1;
-    min-width: 30rem;
+    min-width: 28rem    ;
 }
 input {
     font-size: var(--font-size);
@@ -81,7 +95,7 @@ input {
 /* Heading ============================================= */
 .c-heading {
     margin: 0 0 0 var(--inner-gap);
-    font-size: 2.8rem;
+    font-size: var(--heading-font-size);
     font-weight: normal;
     text-transform: uppercase;
 }
@@ -106,14 +120,12 @@ input {
 
 /* Icon ============================================= */
 .c-icon {
-    --size: 2.8rem;
-    width: var(--size);
-    height: var(--size);
+    width: var(--icon-size);
+    height: var(--icon-size);
 }
 .c-icon.--lg {
-    --size: 3.5rem;
-    width: var(--size);
-    height: var(--size);
+    width: var(--icon-size-lg);
+    height: var(--icon-size-lg);
 }
 
 
@@ -140,7 +152,7 @@ input {
     vertical-align: middle;
     height: var(--form-height);
     background-color: rgba(var(--color-main));
-    padding: 0 1.7rem;
+    padding: 0 var(--button-padding);
 }
 
 /* Input ============================================= */
