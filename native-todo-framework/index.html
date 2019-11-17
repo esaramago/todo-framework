@@ -8,15 +8,7 @@
         <link rel="stylesheet" href="./css/framework.css">
     </head>
     <body>
-        <header class="c-header">
-            <svg class="c-icon --lg">
-                <use xlink:href="./img/sprite.svg#icon-logo"></use>
-            </svg>
-            <h1 class="c-heading">
-                ToDo
-                <span class="c-heading__strong">native</span>
-            </h1>
-        </header>
+        <c-header title="Native"></c-header>
         <main class="c-main">
             <form class="o-grid">
                 <div class="o-grid__full">
@@ -25,68 +17,15 @@
                 </div>
                 <div>    
                     <button type="submit" class="c-button">
-                        <svg class="c-icon">
-                            <use xlink:href="./img/sprite.svg#icon-add"></use>
-                        </svg>
+                        <c-icon icon="add"></c-icon>
                     </button>
                 </div>
             </form>
             
             <ul class="c-list">
-                <li class="c-list-item --done">
-                    <div class="o-grid">
-                        <div>
-                            <label for="item1" class="is-visually-hidden">Mark Item 1 as done</label>
-                            <input type="checkbox" class="c-checkbox" name="items" id="item1" checked>
-                        </div>
-                        <div class="o-grid__full">
-                            Lorem ipsum dolor
-                        </div>
-                        <div>
-                            <button type="submit" class="c-button">
-                                <svg class="c-icon">
-                                    <use xlink:href="./img/sprite.svg#icon-remove"></use>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </li>
-                <li class="c-list-item">
-                    <div class="o-grid">
-                        <div>
-                            <label for="item2" class="is-visually-hidden">Mark Item 1 as done</label>
-                            <input type="checkbox" class="c-checkbox" name="items" id="item2">
-                        </div>
-                        <div class="o-grid__full">
-                            Lorem ipsum dolor
-                        </div>
-                        <div>
-                            <button type="submit" class="c-button">
-                                <svg class="c-icon">
-                                    <use xlink:href="./img/sprite.svg#icon-remove"></use>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </li>
-                <li class="c-list-item">
-                    <div class="o-grid">
-                        <div>
-                            <label for="item2" class="is-visually-hidden">Mark Item 1 as done</label>
-                            <input type="checkbox" class="c-checkbox" name="items" id="item2">
-                        </div>
-                        <div class="o-grid__full">
-                            Lorem ipsum dolor
-                        </div>
-                        <div>
-                            <button type="submit" class="c-button">
-                                <svg class="c-icon">
-                                    <use xlink:href="./img/sprite.svg#icon-remove"></use>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </li>
+                <li is="c-list-item" id="1">Lorem ipsum dolor</li>
+                <li is="c-list-item" id="2" done>Lorem ipsum dolor</li>
+                <li is="c-list-item" id="3">Lorem ipsum dolor</li>
             </ul>
         </main>
     </body>
