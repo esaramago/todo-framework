@@ -25,7 +25,7 @@ export default window.customElements.define(
                     </div>
                     <div class="o-grid__full">${content}</div>
                     <div>
-                        <button type="submit" class="c-button">
+                        <button type="button" class="c-button js-remove" data-id="${id}">
                             <c-icon icon="remove"></c-icon>
                         </button>
                     </div>
