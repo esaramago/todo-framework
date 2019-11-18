@@ -1,6 +1,7 @@
 import header from "./components/header.js";
 import icon from "./components/icon.js";
 import listItem from "./components/list-item.js";
+//import list from "./components/list.js";
 
 const App = function() {
 
@@ -38,6 +39,8 @@ const App = function() {
             button.addEventListener('click', removeItem);
         });
     }
+
+
     function addItem(e) {
 
         e.preventDefault();
@@ -73,6 +76,7 @@ const App = function() {
             }
         }
     }
+    
     function removeItem() {
         var id = this.dataset.id;
         var item = data.find(x => x.id == id);
@@ -87,7 +91,7 @@ const App = function() {
     function saveLocalStorage() {
         localStorage.setItem('todo-items', JSON.stringify(data));
     }
-
+ 
     return {
         init: init
     }
