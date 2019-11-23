@@ -58,8 +58,8 @@ html {
 }
 body {
     font-family: Roboto, sans-serif;
-    line-height: 1;
-    min-width: 28rem    ;
+    line-height: 1.2;
+    min-width: 28rem;
 }
 input {
     font-size: var(--font-size);
