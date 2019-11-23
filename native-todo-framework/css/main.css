@@ -106,17 +106,19 @@ input {
 
 /* Main ============================================= */
 .c-main {
-    display: grid;
-    grid-gap: var(--outer-gap);
-    padding: var(--outer-gap);
-    box-sizing: border-box;
     max-width: 50rem;
     width: 100%;
     margin: auto;
     font-size: var(--font-size);
 }
 
-
+/* ToDO component ============================================= */
+c-todo {
+    display: grid;
+    grid-gap: var(--outer-gap);
+    padding: var(--outer-gap);
+    box-sizing: border-box;
+}
 
 /* Icon ============================================= */
 .c-icon {

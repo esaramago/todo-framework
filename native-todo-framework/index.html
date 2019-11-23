@@ -10,19 +10,8 @@
     <body>
         <c-header title="Native"></c-header>
         <main class="c-main">
-            <form class="o-grid js-form">
-                <div class="o-grid__full">
-                    <label for="add" class="is-visually-hidden">Add new to do</label>
-                    <input type="text" id="add" placeholder="Add new to do!" class="c-input">
-                </div>
-                <div>    
-                    <button type="submit" class="c-button">
-                        <c-icon icon="add"></c-icon>
-                    </button>
-                </div>
-            </form>
-            
-            <ul class="c-list js-list" is="c-list"></ul>
+            <c-todo id="todo" placeholder="Add new to do!"></c-todo>
+            <c-todo id="todo2" placeholder="Add new to do!"></c-todo>
         </main>
     </body>
 
