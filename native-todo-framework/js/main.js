@@ -14,8 +14,6 @@ const App = function() {
         }
     }
 
-
- 
     return {
         init: init
     }

@@ -11,7 +11,7 @@ export default window.customElements.define(
 
             this.innerHTML = `
                 <svg class="c-icon --${size}">
-                    <use xlink:href="./img/sprite.svg#icon-${icon}"></use>
+                    <use xlink:href="/src/img/sprite.svg#icon-${icon}"></use>
                 </svg>
             `;
         };

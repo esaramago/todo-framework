@@ -113,7 +113,8 @@ input {
 }
 
 /* ToDO component ============================================= */
-c-todo {
+c-todo,
+.c-todo {
     display: grid;
     grid-gap: var(--outer-gap);
     padding: var(--outer-gap);
