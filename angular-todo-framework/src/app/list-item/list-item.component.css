@@ -1,0 +1,13 @@
+/* .c-list {
+    border-bottom: 1px solid #AAA;
+} */
+.c-list-item {
+    padding: var(--inner-gap-sm) var(--inner-gap);
+    background-color: rgb(var(--color-grey-200));
+    margin-bottom: .2rem;
+    word-break: break-word;
+}
+.c-list-item.--done {
+    text-decoration: line-through;
+    background-color: rgba(var(--color-grey-200), .4);
+}

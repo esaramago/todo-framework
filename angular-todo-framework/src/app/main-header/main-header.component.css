@@ -1,0 +1,8 @@
+.c-header {
+    display: flex;
+    align-items: flex-end;
+    padding: var(--inner-gap);
+    background-color: royalblue;
+    box-shadow: 0 .1rem .2rem rgba(var(--color-main), .6);
+    color: #FFF;
+}
