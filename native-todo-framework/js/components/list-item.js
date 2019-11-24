@@ -26,23 +26,27 @@ export default window.customElements.define(
 
             var id = this.getAttribute('id');
             var content = this.getAttribute('content');
-            var isChecked = this.getAttribute('isDone') ? 'checked' : '';
+            var isDone = this.getAttribute('is-done') === 'true';
+            var isChecked = isDone ? 'checked' : '';
+
+            this.classList.add('c-list-item');
+            if (isDone) {
+                this.classList.add('--done');
+            }
 
             this.innerHTML = `
-                <li class="c-list-item">
-                    <div class="o-grid">
-                        <div>
-                            <label for="item${id}" class="is-visually-hidden">Mark Item ${id} as done</label>
-                            <input type="checkbox" class="c-checkbox js-check-item" name="items" id="item${id}" ${isChecked}>
-                        </div>
-                        <div class="o-grid__full">${content}</div>
-                        <div>
-                            <button type="button" class="c-button js-remove-item" data-id="${id}">
-                                <c-icon icon="remove"></c-icon>
-                            </button>
-                        </div>
+                <div class="o-grid">
+                    <div>
+                        <label for="item${id}" class="is-visually-hidden">Mark Item ${id} as done</label>
+                        <input type="checkbox" class="c-checkbox js-check-item" name="items" id="item${id}" ${isChecked}>
                     </div>
-                </li>
+                    <div class="o-grid__full">${content}</div>
+                    <div>
+                        <button type="button" class="c-button js-remove-item" data-id="${id}">
+                            <c-icon icon="remove"></c-icon>
+                        </button>
+                    </div>
+                </div>
             `;
         };
 

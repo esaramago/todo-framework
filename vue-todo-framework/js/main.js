@@ -13,9 +13,9 @@ const app = new Vue({
 
     created() {
 
-        var data = JSON.parse(localStorage.getItem('todo-items'));
-        if (data) {
-            this.items = data;
+        var storage = localStorage.getItem('todo-items');
+        if (storage && storage !== 'undefined') {
+            this.items = JSON.parse(storage);
         }
     },
 
