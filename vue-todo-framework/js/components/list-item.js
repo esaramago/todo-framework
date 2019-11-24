@@ -1,25 +1,38 @@
 export default Vue.component('list-item', {
-    props: ['content', 'isDone'],
+    props: ['content', 'isDone', 'id'],
     data() {
         return {
-            isChecked: this.isDone ? 'checked' : '',
-            isDoneClass: this.isDone ? '--done' : ''
+            isDoneClass: this.isDone ? '--done' : '',
+            inputId: 'item' + this.id
         }
     },
     template: `
-        <li class="c-list-item" :class="isDoneClass">
+        <li class="c-list-item" :class="isDone ? '--done' : ''">
             <div class="o-grid">
                 <div>
-                    <label for="item111" class="is-visually-hidden">Mark Item 111 as done</label>
-                    <input type="checkbox" class="c-checkbox js-check-item" name="items" id="item111" :checked="isChecked">
+                    <label :for="inputId" class="is-visually-hidden">Mark Item {{id}} as done</label>
+                    <input type="checkbox" class="c-checkbox" name="items" :id="inputId" :value="isDone" :checked="isDone" v-on:change="toggleDone">
                 </div>
                 <div class="o-grid__full">{{this.content}}</div>
                 <div>
-                    <button type="button" class="c-button js-remove-item" data-id="1111">
+                    <button type="button" class="c-button" v-on:click="remove">
                         <icon icon="remove"></icon>
                     </button>
                 </div>
             </div>
         </li>
-    `
+    `,
+    methods: {
+        toggleDone() {
+            //this.isDone = true; // [Vue warn]: Avoid mutating a prop directly...
+
+            this.$emit('check', {
+                isDone: !this.isDone,
+                id: this.id
+            });
+        },
+        remove() {
+            this.$emit('remove', this.id);
+        }
+    }
 });

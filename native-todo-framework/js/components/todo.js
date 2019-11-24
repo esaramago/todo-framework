@@ -51,21 +51,6 @@ export default window.customElements.define(
             var id = Math.random();
             this.innerHTML = `
                 
-                <form class="o-grid js-form">
-                    <div class="o-grid__full">
-                        <label for="add${id}" class="is-visually-hidden">${placeholder}</label>
-                        <input type="text" id="add${id}" placeholder="${placeholder}" class="c-input js-add-item">
-                    </div>
-                    <div>    
-                        <button type="submit" class="c-button">
-                            <c-icon icon="add"></c-icon>
-                        </button>
-                    </div>
-                </form>
-                
-                <ul class="c-list">
-                    ${list}
-                </ul>
             `;
 
 

@@ -10,23 +10,21 @@
         <div id="app">
             <main-header :title="title"></main-header>
             <main class="c-main">
-                <div class="c-todo">
-                    <form class="o-grid js-form">
-                        <div class="o-grid__full">
-                            <label for="add" class="is-visually-hidden">{{placeholder}}</label>
-                            <input type="text" id="add" :placeholder="placeholder" class="c-input js-add-item">
-                        </div>
-                        <div>
-                            <button type="submit" class="c-button">
-                                <icon icon="add"></icon>
-                            </button>
-                        </div>
-                    </form>
-                    
-                    <ul class="c-list">
-                        <list-item v-for="item in items" :content="item.content" :is-done="item.isDone" :key="item.id"></list-item>
-                    </ul>
-                </div>
+                <form class="o-grid js-form">
+                    <div class="o-grid__full">
+                        <label for="add" class="is-visually-hidden">{{placeholder}}</label>
+                        <input type="text" id="add" v-model="inputValue" :placeholder="placeholder" class="c-input">
+                    </div>
+                    <div>
+                        <button type="submit" class="c-button" v-on:click="addItem">
+                            <icon icon="add"></icon>
+                        </button>
+                    </div>
+                </form>
+                
+                <ul class="c-list">
+                    <list-item v-for="item in items" :content="item.content" :is-done="item.isDone" :id="item.id" :key="item.id" v-on:check="toggleDone" v-on:remove="remove"></list-item>
+                </ul>
             </main>
         </div>
     </body>
