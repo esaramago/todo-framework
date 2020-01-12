@@ -1,15 +1,23 @@
 import React from 'react';
 import Icon from '../icon/icon';
-import ListItem from '../listitem/listitem';
+import ToDoList from '../todolist/todolist';
 
 class ToDo extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: ''
+        }
+    }
+
     render() {
         return (
             <React.Fragment>
-                <form className="o-grid js-form">
+                <form className="o-grid js-form" onSubmit={(e) => {e.preventDefault(); console.log(this.state.value)}}>
                     <div className="o-grid__full">
-                        <label htmlFor="add" className="is-visually-hidden">Add new to do!</label>
-                        <input type="text" id="add" placeholder="Add new to do!" className="c-input" />
+                        <label htmlFor="add" className="is-visually-hidden">{this.props.placeholder}</label>
+                        <input type="text" id="add" placeholder={this.props.placeholder} className="c-input" defaultValue={this.state.value} />
                     </div>
                     <div>
                         <button type="submit" className="c-button">
@@ -18,9 +26,7 @@ class ToDo extends React.Component {
                     </div>
                 </form>
 
-                <ul className="c-list">
-                    <ListItem/>
-                </ul>
+                <ToDoList list={this.props.items} />
             </React.Fragment>
         )
     }
