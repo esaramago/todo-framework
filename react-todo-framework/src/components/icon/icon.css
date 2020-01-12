@@ -1,0 +1,10 @@
+
+/* Icon ============================================= */
+.c-icon {
+    width: var(--icon-size);
+    height: var(--icon-size);
+}
+.c-icon.--lg {
+    width: var(--icon-size-lg);
+    height: var(--icon-size-lg);
+}
